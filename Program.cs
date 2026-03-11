@@ -60,7 +60,30 @@ namespace OOP06
             // it will return "Standby" , bc the Toaster() class doesn't overrid Status() method , so it uses the default implementaion
 
             #endregion
-        #endregion
+            #region Q4
+            // a)
+            // a partial class allows you to split a single class definition across multiple files — the compiler merges them into one class
+
+            // Why split Calculator into two files?
+            // organize large classes , protect manual code ,enable code generation , multiple developers can work on the same class without conflicts
+
+            // b) 
+            // a partial method is declared in one part of a partial class and optionally implemented in another part
+
+            // if the OnCalculated() implemntaion is deleted, the code will stil compile
+            // // the compiler removes the call entirely
+
+            // c)
+            // an extension method lets you add new methods to an existing type without modifying its source code, without inheritance, and without recompiling
+
+            // rules:
+            // must be static class , static method , this on 1st parameter
+
+            // d)
+            // $20.00
+
+            #endregion
+            #endregion
         }
     }
 }
