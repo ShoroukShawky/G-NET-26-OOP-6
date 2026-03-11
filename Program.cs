@@ -38,7 +38,29 @@ namespace OOP06
             // use interface when you need loose coupling, extensibility, or multiple inheritance
             // use abstract class when classes share common code or represent the same hierarchy
             #endregion
+            #region Q3
+            // a) 
+            // no , bc this a abstract class it used only as base class for inheritance
+
+            // b)
+            // PowerConsumption(): is an abstracts method, has no implementaion in the base class,
+            // every child class must by override it and write his own implementaion
+
+            // Status(): is a virtual method, has default implementaion ,
+            // child classes can overrid it if they want
+
+            // Label(): is a concrete method , has a complete implementaion and isn't meant be overridden
+
+            // the designer used:
+            // abstract -> when every subclass must define it's own behavior
+            // virtual -> when subclasses may change the behavior
+            //concrete -> when the same behavior works for all subclasses
+
+            // c)
+            // it will return "Standby" , bc the Toaster() class doesn't overrid Status() method , so it uses the default implementaion
+
             #endregion
+        #endregion
         }
     }
 }
