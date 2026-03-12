@@ -84,6 +84,42 @@ namespace OOP06
 
             #endregion
             #endregion
+
+            #region part02
+            Cinema cinema = new Cinema();
+            cinema.OpenCinema();
+
+            // Ticket ticket = new Ticket("Test" , 100);
+
+
+            StandardTicket t1 = new StandardTicket("inception", 80, "A5");
+            VIPTicket t2 = new VIPTicket("Avengers", 200, true);
+            IMAXTicket t3 = new IMAXTicket("Dune", 100, true);
+
+            t1.Book();
+            t2.Book();
+            t3.Book();
+
+            cinema.AddTicket(t1);
+            cinema.AddTicket(t2);
+            cinema.AddTicket(t3);
+
+            cinema.PrintAllTickets();
+            Console.WriteLine("\n--- Polymorphism: Final Price per Ticket ---");
+            Ticket[] tickets = new Ticket[] {t1 ,t2 ,t3 };
+            foreach (Ticket ticket in tickets)
+            {
+                ticket.FinalPrice();
+            }
+
+            t1.GenerateReceipt();
+
+            Console.WriteLine("\n--- Extension Method: Total Revenue ---");
+            TicketExtensions.TotalRevenue(tickets);
+
+            cinema.CloseCinema();
+            
+            #endregion
         }
     }
 }
